@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE shop [
+        <!-- Объявление возможных элементов -->
+        <!ELEMENT tablet EMPTY>
+        <!ELEMENT tablets (tablet+)>
+        <!ELEMENT phone EMPTY>
+        <!ELEMENT phones (phone+)>
+        <!ELEMENT e-book EMPTY>
+        <!ELEMENT e-books (e-book+)>
+        <!ELEMENT smart_watch EMPTY>
+        <!ELEMENT smart_watches (smart_watch+)>
+        <!ELEMENT technique (phones,tablets,smart_watches,e-books)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT shop (name, technique)>
+
+        <!-- Добавление атрибутов для элементов employee и office -->
+        <!ATTLIST phones
+        brand CDATA #REQUIRED
+        model  CDATA #REQUIRED
+        price CDATA #REQUIRED
+        >
+
+        <!ATTLIST tablets
+        brand CDATA #REQUIRED
+        model CDATA #REQUIRED
+        price CDATA #REQUIRED
+        >
+
+        <!ATTLIST smart_watches
+        brand CDATA #REQUIRED
+        model CDATA #REQUIRED
+        price CDATA #REQUIRED
+        >
+
+        <!ATTLIST e-books
+        brand CDATA #REQUIRED
+        model CDATA #REQUIRED
+        price CDATA #REQUIRED
+        >
+
+
+        <!-- Добавление сущностей -->
+        <!ENTITY M "Motorola">
+        <!ENTITY H "Hui">
+        <!ENTITY S "Samsung">
+]>
+
+<shop>
+    <name>IT-Heaven</name>
+    <!-- Иван недавно уволился, только неделю отработать должен. Не забудьте потом удалить его из списка.-->
+    <typesOfProcucts>
+        <Phones>
+                <Phone brand="&M;" model ="TLKR T92 H2O" price="1000"/>
+                <Phone brand="&H;"  model ="P40 lite" price="9000"/>
+                <Phone brand="&S;"  model ="SGH r200" price="6000"/>
+        </Phones>
+        <Tablets>
+            <Tablet brand="Lenovo" model ="M10 Plus TB-X606F 10.3 IPS FHD" price="200000" />
+            <Tablet brand="&H;"  model ="M10 Plus TB-X606F 10.3 IPS FHD" price="499"/>
+            <Tablet brand="&S;"  model ="MatePad T10 / AGR-L09" price="490"/>
+        </Tablets>
+        <Smart_watches>
+            <Smart_watch  brand="Apple" model ="Apple Watch Series 6 GPS 40mm / MG143" price="000009" />
+            <Smart_watch brand="&H;"  model ="Watch Fit TIA-B09" price="269"/>
+            <Smart_watch brand="&S;"  model =" Galaxy Watch4 Classic" price="900000"/>
+        </Smart_watches>
+        <Ebooks>
+                <Ebook  brand="Onyx" model ="Boox Darwin 7 " price="8000" />
+                <Ebook  brand="Digma;"  model =" E60C" price="210"/>
+                <Ebook  brand="Ritmix"  model ="RBK-677FL" price="273"/>
+        </Ebooks>
+    </typesOfProcucts>
+</shop>
