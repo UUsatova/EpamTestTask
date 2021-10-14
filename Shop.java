@@ -13,9 +13,9 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 class Gadget {
 
-    protected String brand;
-    protected String model;
-    protected int price;
+    private String brand;
+    private String model;
+    private int price;
 
     public Gadget( String brand,String model,int price){
         this.brand = brand;
@@ -40,7 +40,7 @@ class Gadget {
 
 public class Shop {
     
-    public Map<String, List<Gadget>> typesOfProcucts;  //ключи: все разновидности продукции в магазине 
+    private Map<String, List<Gadget>> typesOfProcucts;  //ключи: все разновидности продукции в магазине 
 
     public Shop(){
         
